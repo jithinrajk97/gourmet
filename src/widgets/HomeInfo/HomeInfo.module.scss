@@ -1,0 +1,39 @@
+@import '../../style/variable.scss';
+
+.section {
+    background-color: #2C201E;
+
+    :global(.pagination) {
+        gap: 12px;
+        --bs-pagination-active-bg:#76330C;
+        --bs-pagination-bg:#2C201E;
+        --bs-pagination-border-color:#262626;
+        --bs-pagination-active-border-color:#76330C;
+        --bs-tertiary-bg:#76330C;
+        --bs-border-color:#76330C;
+    }
+
+    :global(.page-link) {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        color: $white;
+        font-weight: 600;
+        &:first-child{
+            border-radius: 16px !important;
+        }
+        &:last-child{
+            border-radius: 16px !important;
+        }
+    }
+
+    .pagination_row{
+        margin-top: 50px;
+        @include min(1200){
+            margin-top: size(70);
+        }
+    }
+}

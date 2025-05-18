@@ -1,0 +1,33 @@
+@import '../../style/variable.scss';
+
+.footer {
+    padding: size(40) 0;
+    &_top{
+        border-bottom: 1px solid #33302E;
+        a{
+            color: #fff;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color: $secondary;
+            }
+        }
+
+        // Social media icons hover effects
+        svg {
+            transition: all 0.3s ease;
+            margin: 0 18px;
+            
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    &_bottom{
+        padding-top: size(40); 
+        text-align: center;
+    }
+
+
+}

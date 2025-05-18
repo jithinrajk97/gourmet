@@ -1,0 +1,131 @@
+@import '../../style/variable.scss';
+
+.title {
+    font-size: 35px;
+    line-height: 1.4;
+    color: #fff;
+
+    @include lg {
+        font-size: size(64);
+    }
+
+    span {
+        opacity: 0.2;
+    }
+}
+
+.section {
+    --pt: 80px;
+    --pb: 80px;
+    background: #000;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    @include lg {
+        --pt: 200px;
+        --pb: 200px;
+    }
+}
+
+
+.img {
+    --bs-aspect-ratio: 110.7%;
+    will-change: transform;
+}
+
+.tab_card {
+    --bg: rgb(255 255 255 / 75%);
+    --t: 0%;
+    --l: 0%;
+    --min-width: 110px;
+    --max-width: 255px;
+    z-index: 22;
+
+    @include lg {
+        --max-width: #{size(310)};
+        --min-width: #{size(130)};
+
+    }
+
+    &_item {
+        background-color: var(--bg);
+        padding: 12px;
+        border-radius: 15px;
+        min-width: var(--min-width);
+        max-width: var(--max-width);
+        position: absolute;
+        top: var(--t);
+        left: var(--l);
+        backdrop-filter: blur(20px);
+        --bg: #fff;
+        width: 30%;
+
+        @include max(991.98) {
+            transform: scale(0.8);
+        }
+
+        @include lg {
+            padding: size(16);
+
+        }
+
+
+        h6 {
+            font-size: 12px;
+
+            @include lg {
+                font-size: size(22);
+            }
+        }
+
+        p {
+            font-size: 10px;
+            color: #4D4D4D;
+
+            @include lg {
+                font-size: size(15);
+            }
+        }
+
+        &__one {
+            --t: -10%;
+            --l: -2%;
+
+            @include lg {
+                --t: 60%;
+                --l: -44%;
+            }
+        }
+
+        &__two {
+            --t: -10%;
+            --l: -2%;
+
+            @include lg {
+                --t: -5%;
+                --l: -22%;
+            }
+        }
+
+        &__three {
+            --t: -10%;
+            --l: -2%;
+
+            @include lg {
+                --t: 0%;
+                --l: 103%;
+            }
+        }
+
+        &__four {
+            --t: -10%;
+            --l: 44%;
+
+            @include lg {
+                --t: 50%;
+                --l: 124%;
+            }
+        }
+    }
+}

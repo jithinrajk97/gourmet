@@ -1,0 +1,73 @@
+@import "../../style/variable.scss";
+
+.section {
+  :global {
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: url("/assets/images/contact-bg.png") center/cover no-repeat;
+      border-radius: 32px;
+      padding: 40px;
+      gap: 40px;
+      min-height: 400px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+      @include max(991.98) {
+        flex-direction: column;
+        padding: 24px;
+        gap: 24px;
+      }
+    }
+
+    .contact-info {
+      color: $white;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      font-size: $font-size-6;
+      justify-content: center;
+      &__item {
+        margin-bottom: 0;
+        word-break: break-all;
+        opacity: 0.95;
+      }
+    }
+
+    .contact-form {
+      background: transparent;
+      border-radius: 18px;
+      padding: 32px 24px;
+      flex: 2;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+
+    .form-control {
+      background-color: #412210 !important;
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+      border-radius: 16px;
+      border: none;
+      min-height: 46px;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        font-family: var(--ff-inter);
+      }
+
+      &:focus {
+        background-color: #412210 !important;
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        box-shadow: none;
+      }
+    }
+  }
+}

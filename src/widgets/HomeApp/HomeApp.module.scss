@@ -1,0 +1,17 @@
+@import '../../style/variable.scss';
+
+.section {
+    .circle{
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        border: 2px solid #fff;
+        margin-top: 3px;
+    }
+    .content{
+        p{
+            color: #828282 !important;
+        }
+    }
+}
+

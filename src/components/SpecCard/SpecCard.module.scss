@@ -1,0 +1,26 @@
+@import '../../style/variable.scss';
+
+.card {
+    background-color: #E1FEFF;
+    border-radius: 50px;
+    padding: 30px 30px 43px;
+
+    .title {
+        font-size: 20px;
+    }
+
+    &_head {}
+
+    .icon {
+        --size: 45px;
+        background-color: #3FBEC2;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    &_body {
+        p {
+            color: #4D4D4D;
+        }
+    }
+}

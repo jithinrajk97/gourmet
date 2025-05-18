@@ -1,0 +1,44 @@
+@import "../../style/variable.scss";
+
+.section {
+  padding-bottom: 100px;
+  background-color: #000;
+  z-index: 15;
+
+  @include lg {
+    padding: size(100) 0;
+  }
+
+  &_content {
+    position: relative;
+    .box {
+      width: 39px;
+      height: 52px;
+      background-color: #76330c;
+      position: absolute;
+      opacity: 0.5;
+      left: 0;
+      top: 8px;
+      z-index: 1;
+    }
+
+    h2 {
+      position: relative;
+      z-index: 9;
+      padding-left: 15px;
+    }
+
+    p{
+        line-height: 1.8;
+    }
+  }
+  .img{
+    @include min(992){
+        max-width: 432px;
+        margin-left: auto;
+    }
+    :global(.ratio){
+        --bs-aspect-ratio:91.43%;
+    }
+  }
+}

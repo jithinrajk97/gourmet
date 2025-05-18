@@ -1,0 +1,133 @@
+@import "../../style/variable.scss";
+
+.header {
+  // border-bottom: 1px solid #EFEFEF;
+  background: #000;
+  backdrop-filter: blur(21px);
+  transition: all 0.3s ease-in-out;
+
+  :global {
+    .navbar {
+      --bs-navbar-padding-y: 8px;
+      transition: padding 0.3s ease-in-out;
+      @include lg {
+        --bs-navbar-padding-y: 0px;
+      }
+
+      &-nav {
+        --bs-nav-link-color: #fefefe;
+        --bs-nav-link-hover-color: #a45c40;
+        --bs-nav-link-font-weight: 500;
+        --bs-nav-link-font-size: 18px;
+        --bs-navbar-nav-link-padding-x: 0;
+        gap: 48px;
+        .nav-link {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #a45c40;
+            transition: width 0.3s ease-in-out;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.header_scrolled {
+    :global {
+      .navbar {
+        --bs-navbar-padding-y: 0px;
+      }
+    }
+
+    .logo {
+      width: 120px;
+      @include lg {
+        width:7rem;
+      }
+    }
+  }
+
+  &_toggle {
+    span {
+      width: 26px;
+      height: 2px;
+      border-radius: 10rem;
+      background-color: #000000;
+      display: block;
+      margin-bottom: 5px;
+      @include md {
+        width: 30px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+        width: 13px;
+        @include lg {
+          width: 15px;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  --bs-aspect-ratio: 67.59%;
+  width: 130px;
+  transition: width 0.3s ease-in-out;
+  @include lg {
+    width: 10rem;
+  }
+
+  &_sm {
+    --bs-aspect-ratio: 30.76%;
+    width: 80px;
+  }
+}
+
+.dropdown {
+  :global(.dropdown-menu) {
+    --bs-dropdown-font-size: 16px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 7px 3px -1px rgb(0 0 0 / 1%);
+  }
+
+  :global(.dropdown-toggle) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.social {
+  a {
+    &:first-child {
+      svg {
+        margin-left: 0;
+      }
+    }
+    &:last-child {
+        svg {
+          margin-right: 0;
+        }
+      }
+  }
+  svg {
+    transition: all 0.3s ease;
+    margin: 0 18px;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
