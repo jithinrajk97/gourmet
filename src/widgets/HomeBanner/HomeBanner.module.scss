@@ -1,38 +1,40 @@
-@import '../../style/variable.scss';
-
+@import "../../style/variable.scss";
 
 .section {
-    background-color: #000;
-    @include lg {
-        min-height: calc(100vh - var(--header-height));
-    }
+  background-color: #000;
+  @include lg {
+    min-height: calc(100vh - var(--header-height));
+  }
 
-    :global(.ratio) {
-        --bs-aspect-ratio: 87.03%;
-    }
+  :global(.ratio) {
+    --bs-aspect-ratio: 87.03%;
+  }
 
-    .img_wrap{
-        @include min(1200){
-            max-width: 671px;
-            margin-left: auto;
-        }
+  .img_wrap {
+    @include min(1200) {
+      max-width: 671px;
+      margin-left: auto;
     }
+  }
 }
 
 .title {
-    // opacity: 0;
-    will-change: transform, opacity;
+  // opacity: 0;
+  will-change: transform, opacity;
 }
 
-
-
 .title {
+  font-size: size(45);
+  @include min(1200) {
     font-size: size(90);
-
-    strong {
-        font-size: size(90);
-        color: #FA9663;
-        @include lg {}
+  }
+  strong {
+    font-size: size(45);
+    @include min(1200) {
+      font-size: size(90);
     }
+    color: #fa9663;
+    @include lg {
+    }
+  }
 }
-

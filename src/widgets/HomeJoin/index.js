@@ -3,6 +3,7 @@ import Image from "next/image";
 import style from "./HomeJoin.module.scss";
 import { Form, Button } from "react-bootstrap";
 import { useHomejoin } from "./useHomeJoin";
+import Link from "next/link";
 
 const HomeJoin = ({ data }) => {
   const { main } = useHomejoin({ style });
@@ -19,9 +20,9 @@ const HomeJoin = ({ data }) => {
 
         <div className="contact-section">
           <div className="contact-info">
-            <p className={`${style.fade} contact-info__item`}>+971 50-9733071</p>
-            <p className={`${style.fade} contact-info__item`}>hello@vcgourmetdubai.com</p>
-            <p className={`${style.fade} contact-info__item`}>www.vcgourmetdubai.com</p>
+            <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>+971 50-9733071</Link>
+            <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>hello@vcgourmetdubai.com</Link>
+            <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>www.vcgourmetdubai.com</Link>
           </div>
           <div className={`${style.fade}  contact-form`}>
             <Form>

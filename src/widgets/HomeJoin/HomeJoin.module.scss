@@ -34,6 +34,14 @@
       }
     }
 
+    .contact-info__item{
+      color: #fff;
+      // transition: all 0.3s ease-in;
+      &:hover{
+        color: $secondary;
+      }
+    }
+
     .contact-form {
       background: transparent;
       border-radius: 18px;

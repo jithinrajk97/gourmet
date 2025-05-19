@@ -1,43 +1,81 @@
-@import '../../style/variable.scss';
+@import "../../style/variable.scss";
 
 .section {
-    background-color: #2C201E;
+  background-color: #2c201e;
 
-    .fade {
-        will-change: transform;
+  .fade {
+    will-change: transform;
+  }
+
+  :global(.pagination) {
+    gap: 12px;
+    --bs-pagination-active-bg: #76330c;
+    --bs-pagination-bg: #2c201e;
+    --bs-pagination-border-color: #262626;
+    --bs-pagination-active-border-color: #76330c;
+    --bs-tertiary-bg: #76330c;
+    --bs-border-color: #76330c;
+  }
+
+  :global(.page-link) {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: $white;
+    font-weight: 600;
+    &:first-child {
+      border-radius: 16px !important;
+    }
+    &:last-child {
+      border-radius: 16px !important;
+    }
+  }
+
+  .pagination_row {
+    margin-top: 50px;
+    @include min(1200) {
+      margin-top: size(70);
+    }
+  }
+
+  .about_img1 {
+    @include max(991.98) {
+      height: 80px !important;
+    }
+    @include max(567.98) {
+      height: 30px !important;
+    }
+  }
+  .about_img {
+    @include max(991.98) {
+      height: 85px !important;
     }
 
-    :global(.pagination) {
-        gap: 12px;
-        --bs-pagination-active-bg:#76330C;
-        --bs-pagination-bg:#2C201E;
-        --bs-pagination-border-color:#262626;
-        --bs-pagination-active-border-color:#76330C;
-        --bs-tertiary-bg:#76330C;
-        --bs-border-color:#76330C;
+    @include max(567.98){
+      height: 60px !important;
+    }
+  }
+  .choco {
+    @include max(991.98) {
+      display: none;
+    }
+  }
+
+  .almond {
+    width: 100%;
+    justify-content: end;
+    display: flex;
+    position: absolute;
+    figure {
+      --bs-aspect-ratio: 43.6%;
+      max-width: 341px;
     }
 
-    :global(.page-link) {
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 16px;
-        color: $white;
-        font-weight: 600;
-        &:first-child{
-            border-radius: 16px !important;
-        }
-        &:last-child{
-            border-radius: 16px !important;
-        }
+    @include max(991.98){
+        display: none;
     }
-
-    .pagination_row{
-        margin-top: 50px;
-        @include min(1200){
-            margin-top: size(70);
-        }
-    }
+  }
 }

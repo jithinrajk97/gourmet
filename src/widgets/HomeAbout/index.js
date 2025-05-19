@@ -9,7 +9,7 @@ const HomeAbout = ({ data }) => {
 
   return (
     <section
-      className={`${style.section}  position-relative pt-0 pb-0`}
+      className={`${style.section}  position-relative pt-lg-0 pb-0 sec-padding`}
       ref={main}
     >
       <div className="container">
@@ -18,6 +18,11 @@ const HomeAbout = ({ data }) => {
             <div className={style.section_content}>
               <h2 className={`${style.fade} h2 text-white fw-700 mb-4`}>ABOUT US </h2>
               <div className={style.box}></div>
+              <div className={`${style.fade} ${style.img} d-lg-none d-block mb-3`}>
+              <div className="ratio">
+                <Image src="/assets/images/banner/about.png" alt="about" fill />
+              </div>
+            </div>
               <div className="col-lg-10">
                 <p className={`${style.fade}  text-white`}>
                   Coming from the esteemed house of Vivaah Celebrations, VC
@@ -31,7 +36,7 @@ const HomeAbout = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 d-lg-block d-none">
             <div className={`${style.fade} ${style.img}`}>
               <div className="ratio">
                 <Image src="/assets/images/banner/about.png" alt="about" fill />

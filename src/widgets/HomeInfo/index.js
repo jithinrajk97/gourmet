@@ -4,7 +4,7 @@ import style from "./HomeInfo.module.scss";
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import { Pagination } from "react-bootstrap";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useHomeInfo } from "./useHomeInfo";
@@ -13,6 +13,8 @@ const HomeInfo = ({ id }) => {
   const [activePage, setActivePage] = useState(1);
   const { main } = useHomeInfo({ style });
   const chocolateRef = useRef(null);
+  const almondRef = useRef(null);
+
   const itemsPerPage = 8;
   const products = [
     {
@@ -118,19 +120,58 @@ const HomeInfo = ({ id }) => {
   ];
 
   useEffect(() => {
-    gsap.from(chocolateRef.current, {
+    gsap.from(almondRef.current, {
       scrollTrigger: {
-        trigger: chocolateRef.current,
+        trigger: almondRef.current,
         start: "top bottom",
         end: "bottom top",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none reverse",
+        scrub: 1,
       },
       y: 100,
       opacity: 0,
       rotation: -45,
       duration: 1.2,
-      ease: "power3.out"
+      ease: "power3.out",
     });
+
+    gsap.to(almondRef.current, {
+      rotation: 360,
+      duration: 20,
+      repeat: -1,
+      ease: "none",
+    });
+  }, []);
+
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const chocolateAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: chocolateRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+      }
+    });
+
+    chocolateAnimation.fromTo(
+      chocolateRef.current,
+      {
+        y: 0,
+        rotation: 0,
+      },
+      {
+        y: -50,
+        rotation: 10,
+        duration: 1,
+      }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   // Calculate pagination
@@ -153,9 +194,12 @@ const HomeInfo = ({ id }) => {
   }
 
   return (
-    <section className={`${style.section}`} ref={main}>
+    <section
+      className={`${style.section} overflow-hidden position-relative`}
+      ref={main}
+    >
       <div
-        className={style.about_img}
+        className={style.about_img1}
         style={{
           width: "100%",
           height: "268px",
@@ -182,17 +226,30 @@ const HomeInfo = ({ id }) => {
           }}
         />
       </div>
+      <div className={style.almond}>
+        <figure className="ratio">
+          <Image
+            ref={almondRef}
+            src="/assets/images/almond2.png"
+            alt="about"
+            className={style.choco}
+            fill
+          />
+        </figure>
+      </div>
       <div className="d-flex align-items-center sec-padding">
         <div className="container">
           <div className="row mb-4 mt-5">
-            <h1 className={`${style.fade} text-white text-center mb-2 fw-bold`}>Our Products</h1>
+            <h1 className={`${style.fade} text-white text-center mb-2 fw-bold`}>
+              Our Products
+            </h1>
             <p className={`${style.fade} text-white text-center mb-4`}>
               Discover our sweet temptations
             </p>
           </div>
           <div className={`row gy-3 ${style.fade} `}>
             {currentProducts.map((product, index) => (
-              <div key={index} className="col-lg-3">
+              <div key={index} className="col-12 col-md-6 col-lg-3">
                 <ProductCard product={product} />
               </div>
             ))}
@@ -236,6 +293,7 @@ const HomeInfo = ({ id }) => {
           ref={chocolateRef}
           src="/assets/images/chocolate.png"
           alt="about"
+          className={style.choco}
           width={136.66}
           height={98}
           style={{

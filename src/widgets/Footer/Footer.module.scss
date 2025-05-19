@@ -1,33 +1,45 @@
-@import '../../style/variable.scss';
+@import "../../style/variable.scss";
 
 .footer {
-    padding: size(40) 0;
-    &_top{
-        border-bottom: 1px solid #33302E;
-        a{
-            color: #fff;
-            transition: all 0.3s ease;
-
-            &:hover{
-                color: $secondary;
-            }
-        }
-
-        // Social media icons hover effects
-        svg {
-            transition: all 0.3s ease;
-            margin: 0 18px;
-            
-            &:hover {
-                transform: translateY(-3px);
-            }
-        }
+  padding: size(40) 0;
+  @include max(991.98){
+    padding-bottom: 20px;
+    padding-top: 0;
+  }
+  &_top {
+    border-bottom: 1px solid #33302e;
+    a {
+      color: #fff;
+      transition: all 0.3s ease;
+      @include max(991.98) {
+        display: block;
+        margin-bottom: 12px;
+      }
+      &:hover {
+        color: $secondary;
+      }
     }
 
-    &_bottom{
-        padding-top: size(40); 
-        text-align: center;
+    // Social media icons hover effects
+    svg {
+      transition: all 0.3s ease;
+      margin: 0 18px;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
+  }
 
-
+  &_bottom {
+    @include min(992) {
+      padding-top: size(40);
+    }
+    padding-top: 20px;
+    text-align: center;
+  }
 }

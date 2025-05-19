@@ -9,10 +9,10 @@ import Subscribe from "./Subscribe";
 
 function Footer() {
   return (
-    <footer className={`${style.footer} bg-black`}>
+    <footer className={`${style.footer} bg-black `}>
       <div className="container">
-        <div className={`d-flex justify-content-center align-items-center pb-4 gap-5 ${style.footer_top}`}>
-          <div className="text-white d-flex gap-5">
+        <div className={`d-lg-flex justify-content-lg-center align-items-center pb-4 gap-5 ${style.footer_top}`}>
+          <div className="text-white d-lg-flex gap-5">
             <Link href={`#`}>
               HOME
             </Link>
@@ -22,7 +22,7 @@ function Footer() {
             <Link href={`#`}>CONTACT US</Link>
           </div>
 
-          <div>
+          <div className="d-flex mt-lg-0 mt-4 social">
             <Link href={``}>
               <LiaFacebookF color="#fff" size={22} />
             </Link>
