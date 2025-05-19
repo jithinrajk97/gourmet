@@ -3,6 +3,10 @@
 .section {
     background-color: #2C201E;
 
+    .fade {
+        will-change: transform;
+    }
+
     :global(.pagination) {
         gap: 12px;
         --bs-pagination-active-bg:#76330C;

@@ -7,9 +7,11 @@ import { Pagination } from "react-bootstrap";
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useHomeInfo } from "./useHomeInfo";
 
 const HomeInfo = ({ id }) => {
   const [activePage, setActivePage] = useState(1);
+  const { main } = useHomeInfo({ style });
   const chocolateRef = useRef(null);
   const itemsPerPage = 8;
   const products = [
@@ -151,7 +153,7 @@ const HomeInfo = ({ id }) => {
   }
 
   return (
-    <section className={`${style.section}`}>
+    <section className={`${style.section}`} ref={main}>
       <div
         className={style.about_img}
         style={{
@@ -183,12 +185,12 @@ const HomeInfo = ({ id }) => {
       <div className="d-flex align-items-center sec-padding">
         <div className="container">
           <div className="row mb-4 mt-5">
-            <h1 className="text-white text-center mb-2 fw-bold">Our Products</h1>
-            <p className="text-white text-center mb-4">
+            <h1 className={`${style.fade} text-white text-center mb-2 fw-bold`}>Our Products</h1>
+            <p className={`${style.fade} text-white text-center mb-4`}>
               Discover our sweet temptations
             </p>
           </div>
-          <div className="row gy-3">
+          <div className={`row gy-3 ${style.fade} `}>
             {currentProducts.map((product, index) => (
               <div key={index} className="col-lg-3">
                 <ProductCard product={product} />

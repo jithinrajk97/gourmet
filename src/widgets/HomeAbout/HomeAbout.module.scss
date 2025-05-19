@@ -8,6 +8,10 @@
   @include lg {
     padding: size(100) 0;
   }
+  .fade {
+    opacity: 0;
+    will-change: transform;
+  }
 
   &_content {
     position: relative;

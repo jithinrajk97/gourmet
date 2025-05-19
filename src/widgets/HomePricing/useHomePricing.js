@@ -1,35 +1,12 @@
 import { Expo, gsap } from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
+
 
 gsap.config({ force3D: true });
-export const useHomeAbout = ({ style }) => {
+export const useHomePricing = ({ style }) => {
   gsap.registerPlugin(ScrollTrigger);
   const main = useRef(null);
-  const [active, setActive] = useState(0)
-
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}"></span>`;
-    },
-  };
-
-  const customSettings = {
-    spaceBetween: 0,
-    effect: 'fade',
-    pagination: pagination,
-    loop: true,
-    autoplay: true,
-    modules: [EffectFade, Navigation, Pagination, Autoplay],
-    onSlideChange: ((e) => setActive(e.realIndex))
-  };
-
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       const fade = self.selector(`.${style.fade}`);
@@ -62,10 +39,6 @@ export const useHomeAbout = ({ style }) => {
   }, []);
 
   return {
-    main,
-    active,
-    customSettings,
-    pagination,
-    setActive
+    main
   };
 };

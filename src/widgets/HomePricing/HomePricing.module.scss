@@ -3,7 +3,9 @@
 
 .section {
   
-
+.fade {
+    will-change: transform;
+}
     .img{
         figure{
             --bs-aspect-ratio:131%;

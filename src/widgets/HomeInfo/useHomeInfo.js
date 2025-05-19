@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
 gsap.config({ force3D: true });
-export const useHomeAbout = ({ style }) => {
+export const useHomeInfo = ({ style }) => {
   gsap.registerPlugin(ScrollTrigger);
   const main = useRef(null);
   const [active, setActive] = useState(0)

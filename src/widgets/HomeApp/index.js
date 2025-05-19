@@ -1,20 +1,41 @@
 "use client";
 import Image from "next/image";
 import style from "./HomeApp.module.scss";
+import { useHomeApp } from "./useHomeApp";
 
 const HomeApp = ({ data }) => {
+  const { main } = useHomeApp({ style });
   return (
     <section
       className={`${style.section} overflow-hidden d-flex align-items-center `}
+      ref={main}
     >
       <div className="container">
         <div className="col-lg-7 mx-auto text-center text-white">
-          <h2 className=" h2 fw-bold mb-2">FAQ</h2>
-          <p className=" fw-400 mb-lg-5 mb-3">Frequently Asked Questions</p>
+          <h2 className={`${style.fade} h2 fw-bold mb-2`}>FAQ</h2>
+          <p className={` fw-400 mb-lg-5 mb-3 ${style.fade}`}>Frequently Asked Questions</p>
         </div>
 
         <div >
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
+            <div className="col-auto">
+              <div className={style.circle}></div>
+            </div>
+            <div className="col">
+              <div className={style.content}>
+                <h4 className={` h4 text-white`}>
+                  Can your products be shipped worldwide?{" "}
+                </h4>
+                <p className={` title-md mb-0`}>
+                  Yes, absolutely. With a minimum order quantity within a
+                  reasonable timeframe, we are in the capacity to freshly
+                  produce and send you our sweet temptations to you in special
+                  packs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -32,25 +53,7 @@ const HomeApp = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="row mb-4">
-            <div className="col-auto">
-              <div className={style.circle}></div>
-            </div>
-            <div className="col">
-              <div className={style.content}>
-                <h4 className="h4 text-white">
-                  Can your products be shipped worldwide?{" "}
-                </h4>
-                <p className="title-md mb-0">
-                  Yes, absolutely. With a minimum order quantity within a
-                  reasonable timeframe, we are in the capacity to freshly
-                  produce and send you our sweet temptations to you in special
-                  packs.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -68,7 +71,7 @@ const HomeApp = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -87,7 +90,7 @@ const HomeApp = ({ data }) => {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -106,7 +109,7 @@ const HomeApp = ({ data }) => {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -125,7 +128,7 @@ const HomeApp = ({ data }) => {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -144,7 +147,7 @@ const HomeApp = ({ data }) => {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -163,7 +166,7 @@ const HomeApp = ({ data }) => {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>
@@ -185,7 +188,7 @@ const HomeApp = ({ data }) => {
             </div>
           </div>
 
-          <div className="row mb-4">
+          <div className={`row mb-4 ${style.fade} `}>
             <div className="col-auto">
               <div className={style.circle}></div>
             </div>

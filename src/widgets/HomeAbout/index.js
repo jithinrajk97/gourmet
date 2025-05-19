@@ -16,10 +16,10 @@ const HomeAbout = ({ data }) => {
         <div className="row align-items-center">
           <div className="col-lg-8">
             <div className={style.section_content}>
-              <h2 className="h2 text-white fw-700 mb-4">ABOUT US </h2>
+              <h2 className={`${style.fade} h2 text-white fw-700 mb-4`}>ABOUT US </h2>
               <div className={style.box}></div>
               <div className="col-lg-10">
-                <p className="text-white">
+                <p className={`${style.fade}  text-white`}>
                   Coming from the esteemed house of Vivaah Celebrations, VC
                   Gourmet offers an unparalleled selection of premium
                   delicacies. With a passion for excellence and a dedication to
@@ -32,7 +32,7 @@ const HomeAbout = ({ data }) => {
             </div>
           </div>
           <div className="col-lg-4">
-            <div className={style.img}>
+            <div className={`${style.fade} ${style.img}`}>
               <div className="ratio">
                 <Image src="/assets/images/banner/about.png" alt="about" fill />
               </div>

@@ -3,12 +3,26 @@
   border-radius: 21px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: 0.5s all cubic-bezier(0.51,-0.02, 0.46, 1);
   margin-bottom: 20px;
   padding: 8px;
   height: 100%;
+  .imageContainer{
+      
+    img   {
+      transform: scale(1);
+      transition: 0.5s all cubic-bezier(0.51,-0.02, 0.46, 1);
+      will-change: transform;
+    }
+  }
   &:hover {
     transform: translateY(-5px);
+    .imageContainer{
+      
+    img   {
+transform: scale(1.05);
+    }
+  }
   }
 }
 
@@ -23,6 +37,7 @@
     max-width: 280px;
     margin: 0 auto;
   }
+ 
 }
 
 .productInfo {
