@@ -6,7 +6,12 @@
   .fade {
     will-change: transform;
   }
-
+  .choco {
+    will-change: transform;
+  }
+  .dfsd {
+    will-change: transform;
+  }
   :global(.pagination) {
     gap: 12px;
     --bs-pagination-active-bg: #76330c;
@@ -70,8 +75,8 @@
     display: flex;
     position: absolute;
     figure {
-      --bs-aspect-ratio: 43.6%;
-      max-width: 341px;
+      --bs-aspect-ratio: 70.6%;
+      max-width: 140px;
     }
 
     @include max(991.98){
@@ -79,3 +84,39 @@
     }
   }
 }
+
+.almond1 {
+  width: 100%;
+  justify-content: flex-end;
+  right: 8%;
+  display: flex;
+  position: absolute;
+  top: 20%;
+  figure {
+    --bs-aspect-ratio: 70.6%;
+    max-width: 100px;
+  }
+
+  @include max(991.98){
+      display: none;
+  }
+}
+
+.almond2 {
+  width: 100%;
+  justify-content: flex-end;
+  right: 18%;
+  display: flex;
+  position: absolute;
+  top: 20%;
+  
+  figure {
+    --bs-aspect-ratio: 70.6%;
+    max-width: 100px;
+  }
+
+  @include max(991.98){
+      display: none;
+  }
+}
+

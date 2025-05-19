@@ -20,159 +20,88 @@ const HomeInfo = ({ id }) => {
     {
       name: "HAZELNUT DOME ",
       description: "Milk chocolate shell with hazelnut filling Chocolate",
-      image: "/assets/images/products/product-1.png",
+      image: "/assets/images/products/product-4.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-2.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-3.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-4.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-4.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-2.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-3.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-4.png",
+    },
+  
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-4.png",
+    },
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-2.png",
+    },
+    {
+      name: "Carrot Cake",
+      description: "Classic carrot cake with cream cheese frosting",
+      image: "/assets/images/products/product-3.png",
+    },
+    {
+      name: "Tiramisu",
+      description: "Italian coffee-flavored dessert with mascarpone cream",
+      image: "/assets/images/products/product-4.png",
+    },
+  
+    {
+      name: "HAZELNUT DOME ",
+      description: "Milk chocolate shell with hazelnut filling Chocolate",
+      image: "/assets/images/products/product-4.png",
     },
     {
       name: "Strawberry Tart",
       description: "Fresh strawberry tart with vanilla custard",
-      image: "/assets/images/products/product-1.png",
+      image: "/assets/images/products/product-2.png",
     },
     {
       name: "Carrot Cake",
       description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
+      image: "/assets/images/products/product-3.png",
     },
     {
       name: "Tiramisu",
       description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
+      image: "/assets/images/products/product-4.png",
     },
-    {
-      name: "Strawberry Tart",
-      description: "Fresh strawberry tart with vanilla custard",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Carrot Cake",
-      description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Tiramisu",
-      description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Carrot Cake",
-      description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Tiramisu",
-      description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Strawberry Tart",
-      description: "Fresh strawberry tart with vanilla custard",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Carrot Cake",
-      description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Tiramisu",
-      description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Strawberry Tart",
-      description: "Fresh strawberry tart with vanilla custard",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Carrot Cake",
-      description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Tiramisu",
-      description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Carrot Cake",
-      description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Tiramisu",
-      description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Strawberry Tart",
-      description: "Fresh strawberry tart with vanilla custard",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Carrot Cake",
-      description: "Classic carrot cake with cream cheese frosting",
-      image: "/assets/images/products/product-1.png",
-    },
-    {
-      name: "Tiramisu",
-      description: "Italian coffee-flavored dessert with mascarpone cream",
-      image: "/assets/images/products/product-1.png",
-    },
+  
+  
   ];
-
-  useEffect(() => {
-    gsap.from(almondRef.current, {
-      scrollTrigger: {
-        trigger: almondRef.current,
-        start: "top bottom",
-        end: "bottom top",
-        toggleActions: "play none none reverse",
-        scrub: 1,
-      },
-      y: 100,
-      opacity: 0,
-      rotation: -45,
-      duration: 1.2,
-      ease: "power3.out",
-    });
-
-    gsap.to(almondRef.current, {
-      rotation: 360,
-      duration: 20,
-      repeat: -1,
-      ease: "none",
-    });
-  }, []);
-
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    
-    const chocolateAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: chocolateRef.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1,
-      }
-    });
-
-    chocolateAnimation.fromTo(
-      chocolateRef.current,
-      {
-        y: 0,
-        rotation: 0,
-      },
-      {
-        y: -50,
-        rotation: 10,
-        duration: 1,
-      }
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
 
   // Calculate pagination
   const totalPages = Math.ceil(products.length / itemsPerPage);
@@ -229,8 +158,29 @@ const HomeInfo = ({ id }) => {
       <div className={style.almond}>
         <figure className="ratio">
           <Image
-            ref={almondRef}
-            src="/assets/images/almond2.png"
+            src="/assets/images/almond1.png"
+            alt="about"
+            className={style.choco}
+            fill
+          />
+        </figure>
+      </div>
+
+      <div className={style.almond1}>
+        <figure className="ratio">
+          <Image
+            src="/assets/images/almond1.png"
+            alt="about"
+            className={style.choco}
+            fill
+          />
+        </figure>
+      </div>
+
+      <div className={style.almond2}>
+        <figure className="ratio">
+          <Image
+            src="/assets/images/almond1.png"
             alt="about"
             className={style.choco}
             fill
@@ -289,8 +239,10 @@ const HomeInfo = ({ id }) => {
           zIndex: 10,
         }}
       >
+        <div className={style.dfsd}>
         <Image
           ref={chocolateRef}
+
           src="/assets/images/chocolate.png"
           alt="about"
           className={style.choco}
@@ -303,6 +255,7 @@ const HomeInfo = ({ id }) => {
             transform: "translateY(-100%)",
           }}
         />
+        </div>
         <img
           src="/assets/images/top-curve.png"
           alt="about"

@@ -33,6 +33,13 @@ export const useHomeInfo = ({ style }) => {
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       const fade = self.selector(`.${style.fade}`);
+      const almond1 = self.selector(`.${style.almond}`);
+      const almond2 = self.selector(`.${style.almond1}`);
+      const almond3 = self.selector(`.${style.almond2}`);
+      const choco = self.selector(`.${style.dfsd}`);
+      gsap.set(fade, { autoAlpha: 0, y: 100 })
+      gsap.set(almond2, { filter:"blur(10px)" })
+      gsap.set(almond3, { filter:"blur(10px)" })
       gsap.set(fade, { autoAlpha: 0, y: 100 })
 
       let tl = gsap
@@ -46,6 +53,38 @@ export const useHomeInfo = ({ style }) => {
         },
       })
       tl.to(fade, { autoAlpha: 1, y: 0, stagger: 0.13, duration: 1.5, ease: Expo.easeOut },)
+
+
+      let tl1 = gsap
+      .timeline({
+        force3d: true,
+        scrollTrigger: {
+          trigger:almond1,
+          scrub: 1,
+          end:"500%"
+        },
+      })
+      tl1.to(almond1, { autoAlpha: 1, y: 40, ease: Expo.easeOut },0)
+      tl1.to(almond2, { autoAlpha: 1, y: 80, ease: Expo.easeOut },"<")
+      tl1.to(almond3, { autoAlpha: 1, y: -40, ease: Expo.easeOut },"<")
+
+
+
+      let tl2= gsap
+      .timeline({
+        force3d: true,
+        scrollTrigger: {
+          trigger:choco,
+          scrub: 1,
+          markers:false,
+          end:"500%"
+        },
+      })
+      tl2.to(choco, { autoAlpha: 1, y: 40, ease: Expo.easeOut },0)
+
+
+
+    
       // tl.to(banner_bg, { maskSize: "100%", ease: Expo.easeOut, duration: 1.5 }, "<.5")
       // tl.to(banner_bg_img, { autoAlpha: 1, scale: 1, ease: Expo.easeOut, duration: 1.5 }, "<")
       // tl.to(stroke, { autoAlpha: 1, ease: Expo.easeOut, stagger: .1, duration: 1.5, xPercent: 0, scaleX: 1 }, "<.6")
