@@ -62,7 +62,7 @@ const HomeJoin = ({ data }) => {
               </Form.Group>
               <div className="row">
                 <div className="col-auto">
-                  <Button variant="primary" type="submit" className="btn-sm py-2">
+                  <Button variant="primary" type="submit" className="btn-sm py-2 mt-lg-0 mt-3">
                     Submit
                   </Button>
                 </div>
