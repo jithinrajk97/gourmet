@@ -37,6 +37,11 @@ export const useHomeInfo = ({ style }) => {
       const almond2 = self.selector(`.${style.almond1}`);
       const almond3 = self.selector(`.${style.almond2}`);
       const choco = self.selector(`.${style.dfsd}`);
+
+      
+
+
+
       gsap.set(fade, { autoAlpha: 0, y: 100 })
       gsap.set(almond2, { filter:"blur(10px)" })
       gsap.set(almond3, { filter:"blur(10px)" })
@@ -54,6 +59,8 @@ export const useHomeInfo = ({ style }) => {
       })
       tl.to(fade, { autoAlpha: 1, y: 0, stagger: 0.13, duration: 1.5, ease: Expo.easeOut },)
 
+      
+
 
       let tl1 = gsap
       .timeline({
@@ -67,6 +74,21 @@ export const useHomeInfo = ({ style }) => {
       tl1.to(almond1, { autoAlpha: 1, y: 40, ease: Expo.easeOut },0)
       tl1.to(almond2, { autoAlpha: 1, y: 80, ease: Expo.easeOut },"<")
       tl1.to(almond3, { autoAlpha: 1, y: -40, ease: Expo.easeOut },"<")
+
+      
+      // gsap.set(curve, { autoAlpha: 0.2 })
+
+      let tl3 = gsap
+      .timeline({
+        force3d: true,
+        scrollTrigger: {
+          trigger: main.current,
+          start: "top 80%", // Starts when the top of the element is 80% from the top of the viewport
+          end: "bottom 20%",
+          scrub: 1,
+        },
+      })
+      tl3.to(".curve_img", { autoAlpha: .6, ease: Expo.easeOut },0)
 
 
 

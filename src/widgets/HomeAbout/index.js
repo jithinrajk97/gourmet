@@ -11,6 +11,7 @@ const HomeAbout = ({ data }) => {
     <section
       className={`${style.section}  position-relative pt-lg-0 pb-0 sec-padding`}
       ref={main}
+      id="aboutus"
     >
       <div className="container">
         <div className="row align-items-center">

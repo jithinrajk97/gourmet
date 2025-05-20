@@ -13,13 +13,13 @@ function Footer() {
       <div className="container">
         <div className={`d-lg-flex justify-content-lg-center align-items-center pb-4 gap-5 ${style.footer_top}`}>
           <div className="text-white d-lg-flex gap-5">
-            <Link href={`#`}>
+            <Link href={`/`}>
               HOME
             </Link>
-            <Link href={`#`}>ABOUT US</Link>
-            <Link href={`#`}>OUR PRODUCTS</Link>
-            <Link href={`#`}>FAQ</Link>
-            <Link href={`#`}>CONTACT US</Link>
+            <Link href={`#aboutus`}>ABOUT US</Link>
+            <Link href={`#ourproducts`}>OUR PRODUCTS</Link>
+            <Link href={`#faq`}>FAQ</Link>
+            <Link href={`#contactus`}>CONTACT US</Link>
           </div>
 
           <div className="d-flex mt-lg-0 mt-4 social">

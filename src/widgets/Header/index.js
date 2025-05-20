@@ -139,7 +139,7 @@ export default Header;
 const data = [
   {
     label: "Home",
-    url: "#",
+    url: "/",
   },
   {
     label: "About us",
@@ -151,7 +151,7 @@ const data = [
   },
   {
     label: "FAQ",
-    url: "#aboutus",
+    url: "#faq",
   },
   {
     label: "Contact us",

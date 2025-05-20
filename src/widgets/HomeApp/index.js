@@ -7,8 +7,9 @@ const HomeApp = ({ data }) => {
   const { main } = useHomeApp({ style });
   return (
     <section
-      className={`${style.section} overflow-hidden d-flex align-items-center `}
+      className={`${style.section} overflow-hidden d-flex align-items-center sec-padding pb-0`}
       ref={main}
+      id="faq"
     >
       <div className="container">
         <div className="col-lg-7 mx-auto text-center text-white">

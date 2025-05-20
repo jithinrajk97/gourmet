@@ -4,7 +4,7 @@
   padding-bottom: 100px;
   background-color: #000;
   z-index: 15;
-
+  scroll-margin-top: 250px;
   @include lg {
     padding: size(100) 0;
   }

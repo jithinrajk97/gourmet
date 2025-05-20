@@ -9,7 +9,7 @@ import 'swiper/css';
 const HomePricing = ({ data }) => {
   const { main } = useHomePricing({ style });
   return (
-    <section className={`${style.section} sec-padding pt-lg-0`} ref={main}>
+    <section className={`${style.section} sec-padding pt-lg-0 pb-0`} ref={main}>
       <div className="container">
         <div className="col-lg-7 mx-auto text-center text-white">
           <h2 className={`${style.fade} h2 fw-bold mb-2`}>Check out @vcg on Instagram</h2>

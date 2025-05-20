@@ -8,18 +8,18 @@ import Link from "next/link";
 const HomeJoin = ({ data }) => {
   const { main } = useHomejoin({ style });
   return (
-    <section className={`${style.section} sec-padding`} ref={main}>
+    <section className={`${style.section} sec-padding`} ref={main} id="contactus">
       <div className="container">
         <div className="col-lg-5 mx-auto text-center text-white">
           <h2 className={`${style.fade} h2 fw-bold mb-2`}>Contact With Us</h2>
-          <p className={`${style.fade}  fw-400 mb-lg-5 mb-3`}>
+          <p className={`${style.fade}  fw-400 mb-lg-5 mb-4`}>
             Reach out for any inquiries, support, or feedback. We're here to
             help! Provide your details, and we'll get back to you soon.
           </p>
         </div>
 
         <div className="contact-section">
-          <div className="contact-info">
+          <div className="contact-info d-lg-flex d-none">
             <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>+971 50-9733071</Link>
             <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>hello@vcgourmetdubai.com</Link>
             <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>www.vcgourmetdubai.com</Link>
@@ -68,6 +68,12 @@ const HomeJoin = ({ data }) => {
                 </div>
               </div>
             </Form>
+          </div>
+
+          <div className="contact-info d-lg-none d-flex">
+            <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>+971 50-9733071</Link>
+            <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>hello@vcgourmetdubai.com</Link>
+            <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>www.vcgourmetdubai.com</Link>
           </div>
         </div>
       </div>

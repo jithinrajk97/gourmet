@@ -12,6 +12,11 @@
   .dfsd {
     will-change: transform;
   }
+
+  :global(.curve_img){
+    opacity: 0;
+    will-change: opacity;
+  }
   :global(.pagination) {
     gap: 12px;
     --bs-pagination-active-bg: #76330c;

@@ -53,7 +53,7 @@
     .logo {
       width: 120px;
       @include lg {
-        width:7rem;
+        width:9rem;
       }
     }
   }
@@ -90,7 +90,7 @@
   }
  
  @include max(991.98){
-  --bs-aspect-ratio: 42.59%;
+  --bs-aspect-ratio: 56.59%;
  }
 
   &_sm {

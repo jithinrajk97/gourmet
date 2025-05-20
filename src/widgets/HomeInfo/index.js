@@ -126,6 +126,7 @@ const HomeInfo = ({ id }) => {
     <section
       className={`${style.section} overflow-hidden position-relative`}
       ref={main}
+      id="ourproducts"
     >
       <div
         className={style.about_img1}
@@ -145,13 +146,14 @@ const HomeInfo = ({ id }) => {
         <img
           src="/assets/images/about-end-1.png"
           alt="about"
+          className="curve_img"
           style={{
             objectFit: "contain",
             height: "auto",
             width: "100%",
             position: "absolute",
             inset: 0,
-            opacity: "20%",
+            // opacity: "0%",
           }}
         />
       </div>
