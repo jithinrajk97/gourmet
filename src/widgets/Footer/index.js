@@ -12,7 +12,7 @@ function Footer() {
     <footer className={`${style.footer} bg-black `}>
       <div className="container">
         <div className={`d-lg-flex justify-content-lg-center align-items-center pb-4 gap-5 ${style.footer_top}`}>
-          <div className="text-white d-lg-flex gap-5">
+          <div className="text-white d-lg-flex text-center  gap-5">
             <Link href={`/`}>
               HOME
             </Link>
@@ -22,7 +22,7 @@ function Footer() {
             <Link href={`#contactus`}>CONTACT US</Link>
           </div>
 
-          <div className="d-flex mt-lg-0 mt-4 social">
+          <div className="d-flex mt-lg-0 mt-4 social justify-content-center">
             <Link href={``}>
               <LiaFacebookF color="#fff" size={22} />
             </Link>
