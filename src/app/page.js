@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <HomeBanner />
       <HomeAbout data={aboutData} /> 
-       <HomeInfo />
+      <HomeInfo />
       <HomePricing />
       <HomeApp />
       <HomeJoin /> 

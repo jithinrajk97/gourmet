@@ -4,6 +4,7 @@ import style from "./HomeJoin.module.scss";
 import { Form, Button } from "react-bootstrap";
 import { useHomejoin } from "./useHomeJoin";
 import Link from "next/link";
+import { FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 const HomeJoin = ({ data }) => {
   const { main } = useHomejoin({ style });
@@ -11,7 +12,7 @@ const HomeJoin = ({ data }) => {
     <section className={`${style.section} sec-padding`} ref={main} id="contactus">
       <div className="container">
         <div className="col-lg-5 mx-auto text-center text-white">
-          <h2 className={`${style.fade} h2 fw-bold mb-2`}>Contact With Us</h2>
+          <h2 className={`${style.fade} h2 fw-bold mb-2`}>CONTACT US</h2>
           <p className={`${style.fade}  fw-400 mb-lg-5 mb-4`}>
             Reach out for any inquiries, support, or feedback. We're here to
             help! Provide your details, and we'll get back to you soon.
@@ -20,9 +21,15 @@ const HomeJoin = ({ data }) => {
 
         <div className="contact-section">
           <div className="contact-info d-lg-flex d-none">
-            <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>+971 50-9733071</Link>
-            <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>hello@vcgourmetdubai.com</Link>
-            <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>www.vcgourmetdubai.com</Link>
+            <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>
+              <FaPhone className="me-2" /> +971 50-9733071
+            </Link>
+            <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>
+              <FaEnvelope className="me-2" /> hello@vcgourmetdubai.com
+            </Link>
+            <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>
+              <FaGlobe className="me-2" /> www.vcgourmetdubai.com
+            </Link>
           </div>
           <div className={`${style.fade}  contact-form`}>
             <Form>
@@ -71,9 +78,15 @@ const HomeJoin = ({ data }) => {
           </div>
 
           <div className="contact-info d-lg-none d-flex">
-            <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>+971 50-9733071</Link>
-            <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>hello@vcgourmetdubai.com</Link>
-            <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>www.vcgourmetdubai.com</Link>
+            <Link href="tel:+971509733071" className={`${style.fade} contact-info__item`}>
+              <FaPhone className="me-2" /> +971 50-9733071
+            </Link>
+            <Link href="mailto:hello@vcgourmetdubai.com" className={`${style.fade} contact-info__item`}>
+              <FaEnvelope className="me-2" /> hello@vcgourmetdubai.com
+            </Link>
+            <Link href="https://www.vcgourmetdubai.com" target="_blank" rel="noopener noreferrer" className={`${style.fade} contact-info__item`}>
+              <FaGlobe className="me-2" /> www.vcgourmetdubai.com
+            </Link>
           </div>
         </div>
       </div>

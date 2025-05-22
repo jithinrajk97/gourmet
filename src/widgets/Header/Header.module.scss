@@ -23,6 +23,7 @@
         gap: 48px;
         .nav-link {
           position: relative;
+          text-transform: uppercase;
 
           &::after {
             content: "";
@@ -98,6 +99,7 @@
     width: 80px;
   }
 }
+
 
 .dropdown {
   :global(.dropdown-menu) {

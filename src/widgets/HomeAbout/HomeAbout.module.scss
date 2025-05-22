@@ -44,11 +44,14 @@
   }
   .img{
     @include min(992){
-        max-width: 432px;
+        max-width: 480px;
         margin-left: auto;
     }
     :global(.ratio){
-        --bs-aspect-ratio:91.43%;
+        --bs-aspect-ratio:80.43%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #7B4C31;
 
         @include min-max(567,991.98){
           max-width: 80%;

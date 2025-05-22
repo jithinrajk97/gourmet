@@ -21,7 +21,7 @@ const HomeAbout = ({ data }) => {
               <div className={style.box}></div>
               <div className={`${style.fade} ${style.img} d-lg-none d-block mb-3`}>
               <div className="ratio">
-                <Image src="/assets/images/banner/about.png" alt="about" fill />
+                <Image src="/assets/images/banner/about-new.webp" alt="about" fill />
               </div>
             </div>
               <div className="col-lg-10">
@@ -40,7 +40,7 @@ const HomeAbout = ({ data }) => {
           <div className="col-lg-4 d-lg-block d-none">
             <div className={`${style.fade} ${style.img}`}>
               <div className="ratio">
-                <Image src="/assets/images/banner/about.png" alt="about" fill />
+                <Image src="/assets/images/banner/about-new.webp" alt="about" fill />
               </div>
             </div>
           </div>

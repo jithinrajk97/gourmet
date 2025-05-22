@@ -199,9 +199,9 @@ const HomeInfo = ({ id }) => {
               Discover our sweet temptations
             </p>
           </div>
-          <div className={`row gy-3 ${style.fade} `}>
+          <div className={`row gx-lg-3 gx-2 gy-lg-3 gy-2 ${style.fade} `}>
             {currentProducts.map((product, index) => (
-              <div key={index} className="col-12 col-md-6 col-lg-3">
+              <div key={index} className="col-6 col-md-6 col-lg-3">
                 <ProductCard product={product} />
               </div>
             ))}

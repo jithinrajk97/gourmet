@@ -106,14 +106,14 @@ function Header() {
                       <Link
                         key={i}
                         href={`${item?.url}`}
-                        className="nav-link"
+                        className="nav-link text-uppercase"
                         onClick={handleClose1}
                       >{`${item?.label}`}</Link>
                     </div>
                   );
                 })}
 
-                <div className={style.social}>
+                <div className={`${style.social} mt-lg-0 mt-3`}>
                   <Link href={``}>
                     <LiaFacebookF color="#fff" size={20} />
                   </Link>
