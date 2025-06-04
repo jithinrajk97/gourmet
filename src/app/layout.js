@@ -1,4 +1,4 @@
-import { Bonheur_Royale } from 'next/font/google';
+import { Alex_Brush } from 'next/font/google';
 import { Inria_Serif } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import Header from "@/widgets/Header";
@@ -7,7 +7,7 @@ import '../style/global.scss';
 import GlobalProviders from '@/components/GlobalProviders';
 import { WebVitals } from '@/components/WebVitals';
 
-const fontSecondary = Bonheur_Royale({
+const fontSecondary = Alex_Brush({
   subsets: ['latin'],
   variable: '--ff-secondary',
   weight: ['400']
