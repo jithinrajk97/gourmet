@@ -15,7 +15,7 @@ const HomeBanner = ({ data }) => {
 				<div className="row align-items-center">
 					<div className={`${style.wrap} col-lg-6  order-2 order-lg-1`}>
 						<h1 className={`${style.title} h1 text-white lh-1 mb-3 mb-lg-4 fw-500 ff-secondary`}>
-						Sweetening Moments, <br /><strong className="fw-500">Crafting Memories</strong>
+						<span className="ff-sloop">Sweetening Moments, </span><br /><strong className="fw-500 ff-migra">Crafting Memories</strong>
 						</h1>
 						<p className={`text-white ${style.subTitle}`}>Coming from the esteemed house of Vivaah Celebrations, VC Gourmet offers an unparalleled selection of premium delicacies. </p>
 					    <Link href="#ourproducts" className={`${style.btn} btn btn-primary mt-3 ff-inter`}>View Products</Link>

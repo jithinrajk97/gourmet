@@ -6,7 +6,7 @@ import Footer from '@/widgets/Footer';
 import '../style/global.scss';
 import GlobalProviders from '@/components/GlobalProviders';
 import { WebVitals } from '@/components/WebVitals';
-
+import localFont from 'next/font/local'
 const fontSecondary = Alex_Brush({
   subsets: ['latin'],
   variable: '--ff-secondary',
@@ -25,6 +25,28 @@ const fontInter = Inter({
   weight: ['400', '500', '600', '700']
 })
 
+
+const sloop = localFont({
+  variable: '--font-sloop',
+  src: [
+    {
+      path: './fonts/sloop/Sloop Script Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
+const migra = localFont({
+  variable: '--font-migra',
+  src: [
+    {
+      path: './fonts/migra/Migra-Extrabold.woff',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
+
 export const metadata = {
   title: 'Gourmet',
   description: 'Coming from the esteemed house of Vivaah Celebrations, VC Gourmet offers an unparalleled selection of premium delicacies.',
@@ -33,7 +55,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${fontPrimary.variable} ${fontSecondary.variable} ${fontInter.variable}`}>
+      <body className={`${fontPrimary.variable} ${fontSecondary.variable} ${fontInter.variable} ${sloop.variable} ${migra.variable}`}>
       <WebVitals />
         <GlobalProviders>
           <Header />
