@@ -1,0 +1,19 @@
+@import '../../style/variable.scss';
+
+
+.section {
+  min-height: 70svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fade {
+    will-change: transform;
+    opacity: 0;
+}
+    .img{
+        figure{
+            --bs-aspect-ratio:80%;
+        }
+    }
+}
+
