@@ -148,6 +148,9 @@ const data = [
   {
     label: "Our Products",
     url: "#ourproducts",
+  },{
+    label: "Our Clients",
+    url: "/clients",
   },
   {
     label: "FAQ",

@@ -18,6 +18,7 @@ function Footer() {
             </Link>
             <Link href={`#aboutus`}>ABOUT US</Link>
             <Link href={`#ourproducts`}>OUR PRODUCTS</Link>
+            <Link href={`/clients`}>OUR CLIENTS</Link>
             <Link href={`#faq`}>FAQ</Link>
             <Link href={`#contactus`}>CONTACT US</Link>
           </div>
